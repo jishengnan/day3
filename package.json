@@ -1,0 +1,26 @@
+{
+    "name": "day3",
+    "version": "1.0.0",
+    "description": "day3",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jishengnan/day3.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jishengnan/day3/issues"
+    },
+    "homepage": "https://github.com/jishengnan/day3#readme",
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-preset-es2015": "^6.24.1",
+        "gulp": "^4.0.0",
+        "gulp-babel": "^7.0.0"
+    }
+}

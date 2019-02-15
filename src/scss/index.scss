@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body,
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    height: 180px;
+    background: url(../img/top.png) no-repeat;
+    background-size: contain;
+}
+
+.main {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    .top {
+        width: 100%;
+        height: 150px;
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .title {
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .show {
+        flex: 1;
+        overflow: hidden;
+        .uls {
+            width: 100%;
+            div {
+                width: 100%;
+                padding: 20px;
+                display: flex;
+                dl {
+                    width: 50%;
+                    padding: 10px;
+                    dt {
+                        width: 100%;
+                        height: 120px;
+                        text-align: center;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    dd {
+                        h5 {
+                            font-size: 16px;
+                            margin: 5px 0;
+                        }
+                        .p1 {
+                            color: rgb(180, 168, 168);
+                            height: 20px;
+                            line-height: 20px;
+                            font-size: 12px;
+                        }
+                        .p2 {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    background: url(../img/footer.png) no-repeat;
+    background-size: contain;
+}
