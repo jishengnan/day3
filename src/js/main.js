@@ -2,16 +2,11 @@ require.config({
     paths: {
         'swiper': './libs/swiper',
         'scroll': './libs/bscroll.min',
+        'jquery': './libs/jquery'
     }
 });
-require(['scroll', 'swiper'], function(scroll, Swiper) {
-    var arr = [
-        { "name": "猫掌柜梅花软包邮糖果混合口味喜", "src": "01.png", "max": "1000G", "money": "40.00" },
-        { "name": "猫掌柜梅花软包邮糖果混合口味喜", "src": "02.png", "max": "1000G", "money": "40.00" },
-        { "name": "猫掌柜梅花软包邮糖果混合口味喜", "src": "03.png", "max": "1000G", "money": "40.00" },
-        { "name": "猫掌柜梅花软包邮糖果混合口味喜", "src": "04.png", "max": "1000G", "money": "40.00" },
-        { "name": "猫掌柜梅花软包邮糖果混合口味喜", "src": "04.png", "max": "1000G", "money": "40.00" }
-    ]
+require(['scroll', 'swiper', 'jquery'], function(scroll, Swiper, $) {
+
     var uls = document.querySelector('.uls');
     var swiper = new Swiper('.swiper-container', {
         loop: true,
@@ -28,7 +23,15 @@ require(['scroll', 'swiper'], function(scroll, Swiper) {
         click: true
     })
 
-    round(arr);
+    $.ajax({
+        url: '/api/list',
+        dataType: 'json',
+        success: function(data) {
+            if (data.code == 1) {
+                round(data.data);
+            }
+        }
+    });
 
     function round(arr) {
         var sum = 0;
